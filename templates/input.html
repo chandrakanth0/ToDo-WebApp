@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Planner</title>
+    <style>
+        .inp{
+            display: flex;
+            justify-content: center;
+            margin-top: 300px;
+            padding: 50px;
+            margin-left: 350px;
+            margin-right: 350px;
+            background-color: aliceblue;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+
+        a{
+        display:inline;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        margin-top: 30px;
+        border-radius: 20px;
+        background-color: #F6EFBD;
+    }
+    </style>
+
+</head>
+<body>
+    <a href="/">Home</a>
+    <div class="inp">
+    <form action="{{ url_for('plan') }}" method="POST">
+        <label for="task">Enter the task name:</label>
+        <input type="text" id="task" name="task" /><br><br>
+    
+        <label for="priority">Enter the priority:</label>
+        <input type="number" id="priority" name="priority" /><br><br>
+    
+        <button type="submit" style="justify-content: center;display: flex; align-items: center; margin-left:120px ;">Submit</button>
+    </form>
+</div>
+    
+</body>
+</html>

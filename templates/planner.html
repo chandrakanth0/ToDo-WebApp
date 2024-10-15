@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.t{
+    display: flex;
+
+
+    justify-content: center;
+    margin-left:300px ;
+    margin-right: 300px;
+}
+
+h1{
+    display: flex;
+    justify-content: center ;
+}
+
+td,th{
+    justify-items: center;
+}
+
+a{
+    border-radius: 20px;
+    background-color: #F6EFBD;
+}
+
+        table ,th ,td{
+            width: 70%;
+  border: 1px solid rgb(0, 0, 0);
+ 
+}
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>Task's Details</h1>
+    <div class="t">
+    <table >
+<tr> <th> Item Name</th>
+    <th> Priority</th>
+</tr>
+
+{% for task in tasks%}
+<tr>
+    <td><h4>{{ task[0] }}</h4></td>
+    <td><h4>{{ task[1] }}</h4></td>
+</tr>
+
+
+    {% endfor%}
+    </table>
+    
+</div>
+</body>
+
+</html>
